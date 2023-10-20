@@ -16,13 +16,27 @@ p{
 p a, p a:active, p a:visited{
     color: inherit;
     font-family: inherit;
+    font-size: inherit;
     text-decoration: none;
 }
 
 p a:hover{
     color: #FF7A82;
-    font-family: inherit;
     text-decoration: underline;
+}
+
+a.button:link, a.button:visited{
+    color: #FFF9F3;
+    font-family: Alef, Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    background-color: #4BB9BD;
+    padding: 10px 30px; 
+}
+
+a.button:hover{
+    background-color: #358285;
 }
 
 nav{
