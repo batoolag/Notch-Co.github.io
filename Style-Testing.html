@@ -1,3 +1,4 @@
+<!--This file contains sample html for elements that can be reused across pages including nav bar and buttons-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +12,33 @@
 <body>
     <!-- copy and paste this into the body of each page -->
     <!-- starting from this line -->
-    <nav>
+    <nav class="fixed-element">
         <img class="logo" src="/images/logo.png" alt="logo" style="width:50px;height:50px;">
         <ul>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a class="final-link" href="FAQ.html">FAQ</a></li>
             <li><a href="Shop.html">Shop</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a id="current" href="Index.html">Home</a></li>  <!-- change which link has the current id depending on page -->
+            <li class="dropdown">
+                <a class="dropbtn" href="About.html">About</a>
+                <ul class="dropdown-content">
+                    <!-- When writing html for about page, add the text after the # as an id on the respective header-->
+                    <li><a href="About.html#our-objective">Our Objective</a></li>
+                    <li class="dropdown-subheading">About NotchPen</li>
+                    <li>
+                        <ul class="article-list">
+                            <li><a href="Article-How-NotchPen-Works.html">How NotchPen Works</a></li>
+                            <li><a href="Article-Is-NotchPen-for-You.html">Is NotchPen for You?</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="About.html#testimonies">Testimonies</a></li>
+                    <li><a href="About.html#meet-the-team">Meet the Team</a></li>
+                    <li><a href="About.html#contact-us">Contact Us</a></li>
+                </ul>
+            </li>
+            <li><a class="current" href="Index.html">Home</a></li>  <!-- change which link has the current class depending on page -->
         </ul>
     </nav>
     <!-- to this line -->
-    <div style="position: absolute; top: 100px;">
+    <div style="margin-top: 150px;">
         <h1>Header</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -33,7 +50,7 @@
             <br> <br>
             <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Test Link</a>
             <br> <br>
-            <!-- a with class button will always format into a button -->
+            <!--a with class button will always format into a button-->
             <a class="button" href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Test Button</a>
         </p>
     </div>

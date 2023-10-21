@@ -1,6 +1,14 @@
-body{
-    background-color: #FFF9F3;
-}
+/*
+CSS file for general formatting rules that should apply to the whole document
+i.e. 
+background color
+text formatting: font, font size, font color, text alignment
+link formatting: link, visited link, hovered link
+button formatting
+navigation bar
+*/
+
+body{background-color: #FFF9F3;}
 
 h1, h2, h3, h4, h5, h6{
     color: #0A191A;
@@ -35,9 +43,7 @@ a.button:link, a.button:visited{
     padding: 10px 30px; 
 }
 
-a.button:hover{
-    background-color: #358285;
-}
+a.button:hover{background-color: #358285;}
 
 nav{
     width: 100%;
@@ -51,6 +57,7 @@ nav{
 
 nav img.logo{
     float: left;
+    clear: right;
 }
 
 nav ul{
@@ -59,24 +66,57 @@ nav ul{
     padding: 0;
 }
 
-nav li{
-    display: inline;
-}
+nav li, .dropdown-content{display: inline;}
 
 nav a{
     background-color: #153436;
     display: block;
     float: right;
-    padding: 15px;
+    padding: 15px 25px;
     color: #FFF9F3;
     font-size: 14pt;
     text-decoration: none;
 }
 
-nav a:hover{
-    background-color: #0A191A;
+nav a:hover, .dropdown:hover a.dropbtn{background-color: #0A191A;}
+
+.dropdown-content a:hover{
+    border-left: 2px solid #5CE1E6;
 }
 
-nav a#current{
-    text-decoration: underline #5CE1E6 2px;
+nav a.current{text-decoration: underline #5CE1E6 2px;}
+
+nav a.final-link{margin-right: 50px;}
+
+.dropdown{
+    position: relative;
+    float: right;
 }
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 56px;
+    background-color: #153436;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.dropdown-content a, .dropdown-subheading{
+    display: block;
+    float: left;
+    width: 228px;
+    padding: 10px 10px;
+    color: #FFF9F3;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+.article-list a{
+    font-size: 12pt;
+    margin-left: 20px;
+    padding: 5px 10px;
+    width: 208px;
+}
+
+.dropdown:hover .dropdown-content{display: block;}
